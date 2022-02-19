@@ -1,0 +1,22 @@
+table{
+	font-family: century gothic;
+}
+
+.topnav {
+	overflow: hidden;
+	}
+
+.topnav a {
+	  float: center;
+	  display: block;
+	  color: black;
+	  text-align: center;
+	  text-decoration: none;
+	  width: 100px;
+	  height: 100px;
+	}
+
+.topnav a:hover {
+		 background-color: #333;
+		 color: #ffff;
+	}
