@@ -19,22 +19,53 @@ list.**remove**(*x*)
 Menghapus item pertama dari daftar yang nilainya sama dengan *x*. Hal ini menimbulkan [ValueError](https://docs.python.org/3/library/exceptions.html#ValueError) jika item tidak ditemukan.
 
 list.**pop**([*i*])
-	
+
+Menghapus item pada pada posisi yang diberikan dari daftar dan dikembalikan. Jika tidak ada indeks yang ditentukan, `a.pop()` akan menghapus dan mengembalikan item terakhir dari daftar.
 
 list.**clear**()
-	
+
+Menghapus semua item dari dafta. Setara dengan `del a[:]`.
 
 list.**index**(*x[, start[, end]]*)
-	
+
+Mengembalikan indeks berbasis nol dalam daftar item pertama yang nilainya sama dengan *x*. Muncul [ValueError](https://docs.python.org/3/library/exceptions.html#ValueError) jika tidak ditemukan item.
 
 list.**count**(*x*)
-	
+
+Mengembalikan jumlah *x* yang muncul pada daftar.
 
 list.**sort**(*, key=None, reverse=False)
-	
+
+Mengurutkan item dari daftar di tempat ( argumen dapat digunakan untuk penyesuaian pengurutan, penjelasan lebih dalam lihat [sorted()](https://docs.python.org/3/library/functions.html#sorted) ).
 
 list.**reverse**()
-	
+
+Membalikan elemen dari daftar tempat.
 
 list.**copy**()
-	
+
+Mengembalikan salinan daftar. Setara dengan `a[:]`.
+
+Contoh penggunaan sebagian besar metode list :
+```python
+>>> fruits = ['orange', 'apple', 'pear', 'banana', 'kiwi', 'apple', 'banana']
+>>> fruits.count('apple')
+2
+>>> fruits.count('tangerine')
+0
+>>> fruits.index('banana')
+3
+>>> fruits.index('banana', 4)  # Find next banana starting a position 4
+6
+>>> fruits.reverse()
+>>> fruits
+['banana', 'apple', 'kiwi', 'banana', 'pear', 'apple', 'orange']
+>>> fruits.append('grape')
+>>> fruits
+['banana', 'apple', 'kiwi', 'banana', 'pear', 'apple', 'orange', 'grape']
+>>> fruits.sort()
+>>> fruits
+['apple', 'apple', 'banana', 'banana', 'grape', 'kiwi', 'orange', 'pear']
+>>> fruits.pop()
+'pear'
+```
