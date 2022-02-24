@@ -71,7 +71,7 @@ Contoh penggunaan sebagian besar metode list :
 ```
 Metode seperti `insert`, `remove`, atau `sort` yang hanya mengubah list tidak memiliki nilai kembali `none`. Tidak semua data dapat diurutkan atau dibandingkan.
 ### 5.1.1. Menggunakan Lists sebagai Stacks
-Metode list dapat digunakan sebagai stack, di mana elemen terakhir yang ditambahkan adalah elemen pertama yang diambil. Untuk menambahkan item ke bagian atas tumpukan, gunakan append(). Untuk mengambil item dari atas tumpukan, gunakan pop() tanpa indeks eksplisit.
+Metode list dapat digunakan sebagai stack, di mana elemen terakhir yang ditambahkan adalah elemen pertama yang diambil. Untuk menambahkan item ke bagian atas tumpukan, gunakan `append()`. Untuk mengambil item dari atas tumpukan, gunakan `pop()` tanpa indeks eksplisit.
 ```python
 >>> stack = [3, 4, 5]
 >>> stack.append(6)
@@ -113,7 +113,8 @@ List comprehensions menyediakan cara ringkas untuk membuat list. Secara umum, pe
 >>> squares
 [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
 ```
-Note : ini membuat variabel bernama `x`  masih ada setelah loop selesai. 
+Note : ini membuat variabel bernama `x`  masih ada setelah loop selesai.
+
 Untuk menghitung list kotak tanpa efek samping dapat menggunakan :
 ```python
 squares = list(map(lambda x: x**2, range(10)))
@@ -256,7 +257,7 @@ TypeError: 'tuple' object does not support item assignment
 >>> v
 ([1, 2, 3], [3, 2, 1])
 ```
-Dari program dapat dilihat pada keluaran tuple selalu diapit tanda kurung, sehingga interpretasi tupel bersarang benar. Meskipun tuple mirip dengan list, keduanya digunakan dalam situasi yang berbeda dan untuk tujuan yang berbeda. Tuple tidak dapat diubah dan pada umumnya berisi urutan elemen heterogen yang diakses melalui pembongkaran atau pengindeksan. List dapat diubah dan elemennya pada umumnya homogen dan diakses dengan mengulangi list. Tuple kosong dibangun oleh sepasang tanda kurung kosong; tuple dengan satu item dibangun dengan mengikuti nilai dengan koma. Kurang bagus, tapi efektif. Sebagai contoh:
+Dari program dapat dilihat pada keluaran tuple selalu diapit tanda kurung, sehingga interpretasi tupel bersarang benar. Meskipun tuple mirip dengan list, keduanya digunakan dalam situasi yang berbeda dan untuk tujuan yang berbeda. Tuple tidak dapat diubah dan pada umumnya berisi urutan elemen heterogen yang diakses melalui pembongkaran atau pengindeksan. List dapat diubah dan elemennya pada umumnya homogen dan diakses dengan mengulangi list. Tuple kosong dibangun oleh sepasang tanda kurung kosong; tuple dengan satu item dibangun dengan mengikuti nilai dengan koma. Kurang bagus, tapi efektif. Sebagai contoh :
 ```python
 >>> empty = ()
 >>> singleton = 'hello',    # <-- note trailing comma
@@ -441,7 +442,7 @@ Operator Boolean `and` dan `or` yang disebut operator hubung singkat: argumen me
 ```
 Di dalam python, penugasan di dalam ekspresi harus dilakukan secara eksplisit dengan [operator walrus](https://docs.python.org/3/faq/design.html#why-can-t-i-use-an-assignment-in-an-expression) `:=`. Hal ini menghindari kelas umum dari masalah pemrograman seperti mengetik ekspresi `=` padahal yang dimaksud adalah `==`.
 ## 5.8. Membandingkan Urutan dan Jenis Lainnya
-Objek urutan biasanya dapat dibandingkan dengan objek lain dengan jenis urutan yang sama. Perbandingannya menggunakan `leksikografis` pemesanan: pertama, dua item pertama dibandingkan, dan jika berbeda, ini menentukan hasil perbandingan; jika mereka sama, dua item berikutnya dibandingkan, dan seterusnya, sampai salah satu urutan habis. Jika dua item yang akan dibandingkan merupakan urutan dari jenis yang sama, perbandingan leksikografis dilakukan secara rekursif. Jika semua item dari dua urutan membandingkan sama, urutan dianggap sama. Jika satu barisan merupakan sub-urutan awal dari yang lain, barisan yang lebih pendek adalah yang lebih kecil. Urutan leksikografis untuk string menggunakan nomor titik kode Unicode untuk mengurutkan karakter individual. Beberapa contoh perbandingan antara urutan dari jenis yang sama:
+Objek urutan biasanya dapat dibandingkan dengan objek lain dengan jenis urutan yang sama. Perbandingannya menggunakan `leksikografis` pemesanan: pertama, dua item pertama dibandingkan, dan jika berbeda, ini menentukan hasil perbandingan; jika mereka sama, dua item berikutnya dibandingkan, dan seterusnya, sampai salah satu urutan habis. Jika dua item yang akan dibandingkan merupakan urutan dari jenis yang sama, perbandingan leksikografis dilakukan secara rekursif. Jika semua item dari dua urutan membandingkan sama, urutan dianggap sama. Jika satu barisan merupakan sub-urutan awal dari yang lain, barisan yang lebih pendek adalah yang lebih kecil. Urutan leksikografis untuk string menggunakan nomor titik kode Unicode untuk mengurutkan karakter individual. Beberapa contoh perbandingan antara urutan dari jenis yang sama :
 ```python
 (1, 2, 3)              < (1, 2, 4)
 [1, 2, 3]              < [1, 2, 4]
